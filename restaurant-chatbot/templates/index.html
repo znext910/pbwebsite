@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pali Bhavan | Mumbai</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="#" class="logo">PALI <span>BHAVAN</span></a>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-button">Visit Us</a>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="eyebrow">A TASTE OF TRADITION</p>
+        <h1>Good food.<br><span>Beautiful memories.</span></h1>
+        <p class="hero-description">
+            Discover a warm dining experience inspired by the flavours
+            and traditions of India.
+        </p>
+        <div class="hero-actions">
+            <a href="#menu" class="button button-primary">Explore Menu</a>
+            <a href="#about" class="button button-outline">Our Story</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img
+            src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=85"
+            alt="Indian cuisine served in traditional style">
+        <div class="image-label">A memorable dining experience</div>
+    </div>
+</section>
+
+<section class="intro" id="about">
+    <p class="eyebrow">WELCOME TO PALI BHAVAN</p>
+    <h2>Where every meal tells a story.</h2>
+    <p>
+        Great food brings people together. Explore a welcoming space
+        for sharing meals, celebrating occasions, and making memories.
+    </p>
+</section>
+
+<section class="menu-section" id="menu">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">FROM OUR KITCHEN</p>
+            <h2>Explore Our Menu</h2>
+        </div>
+        <p>A selection of dishes to inspire your next visit.</p>
+    </div>
+
+    <div class="menu-grid">
+        <article class="menu-card">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=700&q=80"
+                 alt="Indian curry">
+            <div class="menu-info">
+                <h3>Indian Classics</h3>
+                <p>Discover rich flavours and traditional favourites.</p>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=700&q=80"
+                 alt="Freshly prepared food">
+            <div class="menu-info">
+                <h3>Fresh Favourites</h3>
+                <p>Colourful dishes made for sharing and enjoying.</p>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
+                 alt="Dessert cake">
+            <div class="menu-info">
+                <h3>Something Sweet</h3>
+                <p>Finish your dining experience with a sweet treat.</p>
+            </div>
+        </article>
+    </div>
+
+    <p class="menu-note">
+        Menu items and prices are illustrative. Please contact the
+        restaurant for its current menu.
+    </p>
+</section>
+
+<section class="visit-section" id="contact">
+    <div>
+        <p class="eyebrow">PLAN YOUR VISIT</p>
+        <h2>Your table awaits.</h2>
+        <p>Contact the restaurant to confirm opening hours and reservations.</p>
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=Pali+Bhavan+Mumbai"
+       target="_blank" rel="noopener noreferrer"
+       class="button button-primary">Find Us on Maps</a>
+</section>
+
+<footer>
+    <a href="#home" class="logo">PALI <span>BHAVAN</span></a>
+    <p>A restaurant experience in Mumbai.</p>
+    <p class="copyright">© 2026 Pali Bhavan. Demo website.</p>
+</footer>
+
+<button id="chat-toggle" aria-label="Open restaurant assistant">Chat with us</button>
+
+<div id="chat-panel" class="chat-panel" hidden>
+    <div class="chat-panel-header">
+        <div>
+            <strong>Pali Bhavan Assistant</strong>
+            <p>How can we help?</p>
+        </div>
+        <button id="chat-close" aria-label="Close chat">×</button>
+    </div>
+
+    <div class="chat-messages" id="messages">
+        <div class="message bot-message">
+            Welcome to Pali Bhavan! Ask me about our menu, timings,
+            location, or reservations.
+        </div>
+    </div>
+
+    <div class="quick-questions">
+        <button data-message="Show me the menu">Menu</button>
+        <button data-message="What are your timings?">Timings</button>
+        <button data-message="Where are you located?">Location</button>
+    </div>
+
+    <form id="chat-form">
+        <input id="user-input" type="text"
+               placeholder="Ask a question..." required>
+        <button id="send-button" type="submit">Send</button>
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
